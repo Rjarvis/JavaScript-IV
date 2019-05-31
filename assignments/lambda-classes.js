@@ -29,7 +29,7 @@ class Instructor extends Person{
         console.log(`${student.name} recieves a ${this.points(student)} score on ${subject}`);
     }
     points(student){
-        return student.grade = student.grade + (Math.random()*10);
+        return student.grade = student.grade + (Math.random()*15);
     }
 }
 
@@ -86,6 +86,12 @@ const dave = new Person({
     location: 'Chino'
 })
 
+const tart = new Person({
+    name: 'Tara',
+    age: 21,
+    location: 'CLASSIFIED'
+})
+
 const josh = new Instructor({
     name: 'Josh',
     age: 37,
@@ -93,6 +99,15 @@ const josh = new Instructor({
     specialty: 'Front-end',
     favLanguage: 'C#',
     catchPhrase: 'Anyways, here\'s Wonderwall'
+})
+
+const pope = new Instructor({
+    name: 'Cameron',
+    age: 34,
+    location: 'Chicago',
+    specialty: 'HTML',
+    favLanguage: 'C++',
+    catchPhrase: 'Chrono Trigger is the best game ever, change my mind!'
 })
 
 const roro = new Student({
@@ -103,6 +118,16 @@ const roro = new Student({
     className: 'WEBPT7',
     favSubjects: ['HTML','CSS','Javascript','Cooking'],
     grade: 1.5
+})
+
+const greg = new Student({
+    name: 'Greg',
+    age: '30',
+    location: 'Ann Arbor',
+    previousBackground: 'Kroger stockman',
+    className: 'CS404',
+    favSubjects: ['AI','Recursive Redundancies','video games'],
+    grade: 25
 })
 
 const zen = new ProjectManagers({
@@ -116,24 +141,41 @@ const zen = new ProjectManagers({
     favInstructor: "Josh Knell"
 })
 
+const ryan = new ProjectManagers({
+    name: "Ryan Boris",
+    age: 33,
+    location: "Indianapolis",
+    specialty: "Ninja Code",
+    favLanguage: "Python",
+    catchPhrase: "Crikey Danja Danja DANJA",
+    gradClassName: "CS42",
+    favInstructor: "Cameron Pope"
+})
+
 dave.speak();
 roro.listsSubjects();
+greg.listsSubjects();
 roro.PRAssignment('Javascript IV');
 roro.sprintChallenge('Javascript XXII');
 roro.graduate();
+greg.graduate();
 josh.demo('CSS with Josh');
+pope.demo('Python with Cameron')
+pope.grade(roro, 'CSS');
+josh.grade(greg, 'LESS');
 josh.grade(roro, 'LESS');
-josh.grade(roro, 'LESS');
-josh.grade(roro, 'LESS');
-josh.grade(roro, 'LESS');
-josh.grade(roro, 'LESS');
-josh.grade(roro, 'LESS');
-josh.grade(roro, 'LESS');
-josh.grade(roro, 'LESS');
-josh.grade(roro, 'LESS');
-josh.grade(roro, 'LESS');
-josh.grade(roro, 'LESS');
-josh.grade(roro, 'LESS');
+josh.grade(greg, 'HTML');
+pope.grade(roro, 'Python');
+josh.grade(roro, 'Java');
+josh.grade(greg, 'Node');
+josh.grade(roro, 'Node');
+josh.grade(greg, 'redux');
+josh.grade(roro, 'redux');
+josh.grade(greg, 'React');
+josh.grade(roro, 'React');
 roro.graduate();
+greg.graduate();
 zen.standUp("WebDevsprint404");
 zen.debugsCode(roro,'Responsive Web Design');
+ryan.standUp('SaturdaySprints')
+ryan.debugsCode(greg,'Java Libraries')
