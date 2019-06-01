@@ -177,5 +177,7 @@ roro.graduate();
 greg.graduate();
 zen.standUp("WebDevsprint404");
 zen.debugsCode(roro,'Responsive Web Design');
-ryan.standUp('SaturdaySprints')
-ryan.debugsCode(greg,'Java Libraries')
+ryan.standUp('SaturdaySprints');
+ryan.debugsCode(greg,'Java Libraries');
+ryan.speak();
+zen.demo('Less');
